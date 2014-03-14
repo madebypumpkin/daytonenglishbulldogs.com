@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dayton English Bulldogs</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.fancybox.js"></script>
+		<script src="js/script.js"></script>
+		
+		<script src="js/jquery.validate.js"></script>
+		<script>
+			// When the browser is ready...
+			$(document).ready(function() {
+
+				// Setup form validation on the #register-form element
+				$("#contact-form").validate({
+
+					errorPlacement: function(error, element) {
+						if(element.attr("name") == "type") {
+				        	error.insertAfter("label[for=type]");
+				        } else if(element.attr("name") == "gender") {
+				         	error.insertAfter("label[for=gender]");
+				        }
+				        else {
+				         	error.insertAfter(element);
+				        }
+				    },
+
+				    // Specify the validation rules
+				    rules: {
+				        name: "required",
+				        email: {
+				            required: true,
+				            email: true
+				        },
+				        phone: "required",
+				        type: "required",
+				        gender: "required"
+				    },
+				    
+				    // Specify the validation error messages
+				    messages: {
+				        name: "Please enter your name",
+				        email: "Please enter a valid email address",
+				        phone: "Please enter your phone number",
+				        type: "Please choose a type",
+				        gender: "Please choose a gender"
+				    },
+				    
+				    submitHandler: function(form) {
+				        form.submit();
+				    }
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div id="bulldogs" class="container">
+				<a href="index.html"><img src="images/english-bulldog-puppies.png" alt="bulldog puppies image"></a>
+			</div>
+			<div id="nav" class="clearfix">
+				<ul class="container">
+					<li>
+						<a class="home" href="index.html">Home</a>
+					</li>
+					<li>
+						<a class="about" href="about.html">About</a>
+					</li>
+					<li>
+						<a class="pups" href="pups.html">Pups</a>
+					</li>
+					<li>
+						<a class="pricing" href="pricing.html">Pricing</a>
+					</li>
+					<li>
+						<a class="contact current" href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="banner">
+			<div class="container clearfix">
+				<h1>Interested in a puppy? Have a bulldog question?</h1>
+				<div id="about"> 
+					<form id="contact-form" action="" method="post">
+					  <p>
+					    <label>Your Name</label>
+					    <input type="text" name="name" maxlength="40">
+					  </p>
+
+					  <p>
+					    <label>Your Email Address</label>
+					    <input type="email" name="email" maxlength="40">
+					  </p>
+
+					  <p>
+					    <label>Your Phone Number</label>
+					    <input type="text" name="phone" maxlength="40">
+					  </p>
+
+					  <p>
+					    <label for="type">I am looking for a dog...</label>
+					    <label class="inline"><input type="radio" name="type" value="Pet"> As a Pet</label>
+					    <label class="inline"><input type="radio" name="type" value="Show/Breeding"> For Show/Breeding</label>
+					  </p>
+
+					  <p>
+					    <label for="gender">What gender are you looking for...</label>
+					    <label class="inline"><input type="radio" name="gender" value="Any"> Any</label>
+					    <label class="inline"><input type="radio" name="gender" value="Male"> Male</label>
+					    <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+					  </p>
+
+					  <p>
+					    <label>Comments</label>
+					    <textarea name="comments" placeholder="Type comments or questions here" rows="6" cols="43"></textarea>
+					  </p>
+
+					  <p>
+					    <button type="submit">Submit</button>
+					  </p>
+					</form>
+				</div>
+
+				<div id="contact">
+					<h2>Get in touch</h2>
+					<p>Us: Rob and Sheila DeBord<br>
+					Phone 937-478-1879<br>
+					or 513-456-1023</p>
+					<h2>We&#39;re located in Dayton, Ohio</h2>
+					<iframe width="340" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=dayton+oh&amp;aq=&amp;sll=38.502032,-117.02306&amp;sspn=9.042044,18.874512&amp;ie=UTF8&amp;hq=&amp;hnear=Dayton,+Montgomery,+Ohio&amp;t=m&amp;ll=39.760255,-84.189262&amp;spn=0.06598,0.102997&amp;z=12&amp;output=embed&iwloc=near"></iframe>
+				</div>
+			</div>
+		</div>
+			
+		<div id="footer" class="clearfix">
+			<div class="container">
+				<div id="credit">
+					<p>This website <a href="http://www.madebypumpkin.com" target="_blank">Made By Pumpkin</a></p>
+				</div>
+				<div id="copyright">
+					<p>&copy; Copyright 2014. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+</html>

@@ -1,0 +1,264 @@
+/*Lines 2-5 are a ghetto way to normalize*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'QuestrialRegular';
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+span {
+	padding-left: 2px;
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'QuestrialRegular';
+	src: url('../fonts/questrial-regular-webfont.eot');
+	src: url('../fonts/questrial-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/questrial-regular-webfont.woff') format('woff'),
+	url('../fonts/questrial-regular-webfont.ttf') format('truetype'),
+	url('../fonts/questrial-regular-webfont.svg#QuestrialRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.container {
+	width: 940px; 
+	margin: auto;
+}
+.clearfix:after {
+	clear:both;
+	content:' ';
+	display:block;
+	font-size:0;
+	line-height:0;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+* html .clearfix, *:first-child+html .clearfix {
+	zoom: 1;
+}
+a {
+	text-decoration: none;
+	color: #eeb68c;
+}
+a img {
+	border: 0px;
+}
+ul {
+	list-style: none;
+}
+#bulldogs img {
+	display: block;
+	margin: auto;
+}
+#nav {
+	background-color: #eae9e9;
+	font-size: 14px;
+}
+#nav li {
+	display: inline;
+}
+#nav a {
+	text-transform: uppercase;
+	padding: 20px 25px;
+	margin: 0px 40px;
+	display: block;
+	float: left;
+}
+#nav a, #nav a:visited {
+	color: #a3a3a3;
+}
+#nav a.current {
+	background: url(../images/pawprint.png) no-repeat right center;
+}
+#nav a:hover {
+	color: #797a7b;
+}
+#nav a.contact {
+	margin-right: 0px;
+}
+#banner {
+	padding: 60px 0px 60px 0px;
+}
+#about {
+	float: left;
+	width: 460px;
+	margin: 0px 20px 0px 0px;
+}
+#delivery {
+	clear: both;
+}
+h1 {
+	color: #eeb68c;
+	padding-bottom: 25px;
+	font-size: 40px;
+	font-weight: normal;
+}
+h2 {
+	padding-bottom: 8px;
+	color: #888787;
+}
+p {
+	color: #a3a3a3;
+	font-size: 16px;
+	line-height: 1.85em;
+	padding-bottom: 30px;
+}
+#bullets {
+	float: right;
+	width: 380px;
+	margin: 0px 0px 0px 20px;
+	color: #a3a3a3;
+	font-size: 16px;
+}
+#contact {
+	float: right;
+	width: 380px;
+	padding: 20px 0px 0px 20px;
+	color: #a3a3a3;
+	font-size: 16px;
+}
+#contact p {
+	font-size: 18px;
+}
+#children {
+	color: #a3a3a3;
+	font-size: 16px;
+}
+#btn {
+	padding: 8px 32px;
+	border-radius: 5px;
+	border: 1px solid #eae9e9;
+	font-size: 18px;
+	color: white;
+	background-color: #eeb68c;
+}
+#haley-dog img {
+	float: left;
+	display: inline;
+	margin: 20px 14px 0px 14px;
+	border: solid 2px #eae9e9;
+}
+#content {
+	background-color: black;
+	color: #eeb68c;
+	padding: 40px 0px 40px 0px;
+}
+#about-content, #pups-content {
+	background-color: #eae9e9;
+	color: #eeb68c;
+	padding: 40px 0px 40px 0px;
+}
+.pawprints {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.pawprints li {
+	padding: 0px 0px 40px 30px;
+	background-image: url(../images/pawprint.png);
+	background-repeat: no-repeat;
+}
+.listing {
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.listing h1 {
+	padding: 25px 0px 10px 0px;
+}
+.pics {
+	position: relative;
+	float: left;
+	/*or: display: inline-block;    if do display inline block, take off the clearfix(s)*/
+	width: 280px;
+	margin-right: 20px;
+}
+.fancybox {
+	display: block;
+	height: 180px;
+	width: 280px;
+}
+.zoom {
+	position: absolute;
+	bottom: 5px; 
+	right: 5px;
+}
+.quote {
+	float: right;
+	/*or: display: inline-block;*/
+	width: 600px;
+}
+.pup-stats {
+	float: right;
+	/*or: display: inline-block;*/
+	width: 600px;
+	padding-top: 28px;
+}
+.quote blockquote {
+	margin: 15px 0px 0px 0px;
+	padding: 0px;
+	line-height: 2em;
+}
+form {
+	background-color: #eae9e9;
+	padding: 25px 25px 25px 25px;
+}
+form p{
+	padding-bottom: 10px;
+}
+textarea, select, input {
+   font-family: inherit;
+   font-size: inherit;
+   display: block;
+   width: 394px;
+}
+input, textarea {
+	padding: 4px 6px;
+}
+label {
+	display: block;
+}
+input[type="radio"] {
+	display: inline;
+	width: auto;
+}
+.inline {
+	display: inline;
+	margin-right: 20px;
+}
+.error {
+	color: #eeb68c;
+}
+button {
+	padding: 8px 32px;
+	border-radius: 5px;
+	border: 1px solid #eae9e9;
+	font-size: 18px;
+	color: white;
+	background-color: #eeb68c;
+}
+#footer {
+	background-color: #333;
+	font-size: 16px;
+	padding: 20px 0px 20px 0px;
+}
+#footer p {
+	color: #eae9e9;
+	padding-bottom: 0px;
+}
+#content p {
+	color: #eeb68c;
+	padding-bottom: 0px;
+}
+.omega {
+	padding-bottom: 0px;
+}
+#credit {
+	float: left;
+}
+#copyright {
+	float: right;
+}
